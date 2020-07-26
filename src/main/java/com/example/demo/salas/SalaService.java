@@ -18,5 +18,14 @@ public class SalaService
     {
         return salaRepository.findAll();
     }
-
+    public Sala listOne(Long id)
+    {
+        Sala result = salaRepository.findById(id).get();
+        return result;
+    }
+    public Iterable<Sala> listbytype(String type)
+    {
+        Iterable<Sala> result = salaRepository.findByTipoSala(type);
+        return result;
+    }
 }

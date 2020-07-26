@@ -28,5 +28,12 @@ public class SalaController
     {
         return salaService.listAll();
     }
-    
+    @GetMapping("/tipo")
+    public Iterable<Sala> getTipoSala(@RequestParam(value = "tipoSala") String tipoSala) {
+        return salaService.listbytype(tipoSala);
+    }
+    @GetMapping("/{id}")
+    public Sala getSalas(@PathVariable("id") Long id) {
+        return salaService.listOne(id);                
+    }
 }
