@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET,RequestMethod.POST})
 @RequestMapping("/api/salas")
 public class SalaController 
 {
