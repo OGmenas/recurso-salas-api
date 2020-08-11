@@ -28,4 +28,8 @@ public class SalaService
         Iterable<Sala> result = salaRepository.findByTipoSala(type);
         return result;
     }
+    public void deleteById(Long id)
+    {
+        salaRepository.deleteById(id);
+    }
 }

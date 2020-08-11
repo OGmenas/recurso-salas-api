@@ -37,4 +37,8 @@ public class SalaController
     public Sala getSalas(@PathVariable("id") Long id) {
         return salaService.listOne(id);                
     }
+    @DeleteMapping("/{id}")
+    public void deleteSala(@PathVariable("id") Long id){
+        salaService.deleteById(id);
+    }
 }
